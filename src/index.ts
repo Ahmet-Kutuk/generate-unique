@@ -1,4 +1,4 @@
-import constant from "./constant";
+import constant from './constant';
 
 const createLetterPool = (
   hasNumber: boolean,
@@ -10,7 +10,7 @@ const createLetterPool = (
   const specialList = constant.specialCharacter;
   const upperCharacterList = constant.upperCharacter;
   const lowerCharacterList = constant.lowerCharacter;
-  let letterPool: Array<String[]> = [];
+  const letterPool: Array<string[]> = [];
   hasNumber && letterPool.push(numberList);
   hasSpecial && letterPool.push(specialList);
   hasUpperCharacter && letterPool.push(upperCharacterList);
@@ -26,7 +26,7 @@ export const GenerateUnique = (
   hasUpperCharacter?: boolean,
   hasLowerCharacter?: boolean
 ) => {
-  let createdUnique = "";
+  let createdUnique = '';
   const pool = createLetterPool(
     hasNumber,
     hasSpecial,
@@ -34,16 +34,16 @@ export const GenerateUnique = (
     hasLowerCharacter
   );
 
-  if (pool.length > 0) {
+  if (pool.length > 0) 
     for (let index = 0; index < maxLength; index++) {
       const randomArrayListIndex: number =
         Math.ceil(Math.random() * pool.length) - 1;
-      const characterSet: String[] = pool[randomArrayListIndex];
+      const characterSet: string[] = pool[randomArrayListIndex];
       const randomArrayValueIndex =
         Math.ceil(Math.random() * characterSet.length) - 1;
       createdUnique += characterSet[randomArrayValueIndex] as string;
     }
-  }
+  
 
   return createdUnique;
 };

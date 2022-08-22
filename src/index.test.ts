@@ -1,1 +1,3 @@
-test("inital test", () => {});
+test('inital test', () => {
+  console.log('inital');
+});
