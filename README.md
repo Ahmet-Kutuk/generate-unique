@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+
 # Generate Unique 🛠
 
 "Generate Unique" helps you to create unique passwords and ids as you want.
@@ -35,7 +37,7 @@ And
 ```
 <p>
 {generateUnique(12,true,true,true,true)}
-<p/>
+</p>
 
 example result: N$>BTfWE1R82
 ```
@@ -43,7 +45,7 @@ example result: N$>BTfWE1R82
 ```
 <p>
 {generateUnique(12,true,true,true)}
-<p/>
+</p>
 
 example result: 39OA0$/#I<03
 ```
@@ -51,7 +53,7 @@ example result: 39OA0$/#I<03
 ```
 <p>
 {generateUnique(12,true,true)}
-<p/>
+</p>
 
 example result: 46!0@#22$#**
 ```
@@ -59,7 +61,7 @@ example result: 46!0@#22$#**
 ```
 <p>
 {generateUnique(12,true)}
-<p/>
+</p>
 
 example result: 628829015038
 ```
@@ -67,7 +69,7 @@ example result: 628829015038
 ```
 <p>
 {generateUnique(12)}
-<p/>
+</p>
 
 example result: this example return empty string because We did not specify what it should contain
 ```
