@@ -19,7 +19,7 @@ const createLetterPool = (
   return letterPool;
 };
 
-export const GenerateUnique = (
+const generateUnique = (
   maxLength: number,
   hasNumber?: boolean,
   hasSpecial?: boolean,
@@ -46,3 +46,5 @@ export const GenerateUnique = (
 
   return createdUnique;
 };
+
+export { generateUnique };

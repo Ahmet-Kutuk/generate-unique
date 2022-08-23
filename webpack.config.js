@@ -1,7 +1,9 @@
 const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const source = path.resolve(__dirname, "src");
 
 module.exports = {
-  mode: "none",
+  mode: "production",
   entry: "./src/index.ts",
   module: {
     rules: [
@@ -9,16 +11,19 @@ module.exports = {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/,
+        include: source,
       },
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".ts", ".js"],
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "./dist"),
     filename: "index.js",
-    clean: true,
+    libraryTarget: "umd",
+    globalObject: "this",
+    library: "generateUnique",
   },
-  watch: true,
+  plugins: [new CleanWebpackPlugin()],
 };
