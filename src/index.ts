@@ -1,4 +1,4 @@
-import constant from "./constant";
+import constant from './constant';
 
 const createLetterPool = (
   hasNumber: boolean | undefined,
@@ -26,7 +26,7 @@ const generateUnique = (
   hasUpperCharacter?: boolean,
   hasLowerCharacter?: boolean
 ) => {
-  let createdUnique = "";
+  let createdUnique = '';
   const pool = createLetterPool(
     hasNumber,
     hasSpecial,
