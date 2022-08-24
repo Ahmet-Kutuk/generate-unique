@@ -29,7 +29,7 @@ npm i generate-unique
 ## Usage 🔥
 
 ```
-import {generateUnique} from 'generate-unique);
+import {generateUnique} from 'generate-unique';
 ```
 
 And
