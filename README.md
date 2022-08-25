@@ -26,7 +26,7 @@ npm i generate-unique
 | hasUpperCharacter | false    | Boolean         | String contain upper case character               |
 | hasLowerCharacter | false    | Boolean         | String contain lower case character               |
 | startWith         | false    | String / Number | String start with these characters                |
-| endWith           | false    | String / Number | string end with these characters                  |
+| endWith           | false    | String / Number | String end with these characters                  |
 
 ## Usage 🔥
 
