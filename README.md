@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Generate Unique 🛠
 
@@ -18,13 +18,15 @@ npm i generate-unique
 
 ## Properties ✨
 
-| Name              | Required | Type    | Description                                       |
-| ----------------- | -------- | ------- | ------------------------------------------------- |
-| maxLength         | true     | Number  | Character length of the string you want to create |
-| hasNumber         | false    | Boolean | String contain numbers                            |
-| hasSpecial        | false    | Boolean | String contain special character                  |
-| hasUpperCharacter | false    | Boolean | String contain upper case character               |
-| hasLowerCharacter | false    | Boolean | String contain lower case character               |
+| Name              | Required | Type            | Description                                       |
+| ----------------- | -------- | --------------- | ------------------------------------------------- |
+| maxLength         | true     | Number          | Character length of the string you want to create |
+| hasNumber         | false    | Boolean         | String contain numbers                            |
+| hasSpecial        | false    | Boolean         | String contain special character                  |
+| hasUpperCharacter | false    | Boolean         | String contain upper case character               |
+| hasLowerCharacter | false    | Boolean         | String contain lower case character               |
+| startWith         | false    | String / Number | String start with these characters                |
+| endWith           | false    | String / Number | string end with these characters                  |
 
 ## Usage 🔥
 
@@ -33,6 +35,22 @@ import {generateUnique} from 'generate-unique';
 ```
 
 And
+
+```
+<p>
+{generateUnique(12,true,false,false,false,'user-')}
+</p>
+
+example result: user-7722494
+```
+
+```
+<p>
+{generateUnique(12,true,false,false,false,null,'-uuid')}
+</p>
+
+example result: 5262402-uuid
+```
 
 ```
 <p>

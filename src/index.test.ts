@@ -1,3 +1,21 @@
-test('inital test', () => {
-  console.log('inital');
+const { generateUnique } = require("../dist/index");
+
+test("return string", () => {
+  expect(generateUnique(12, true, true, true, true)).toBeTruthy();
+});
+
+test("string length", () => {
+  expect(generateUnique(12, true, true, true, true)).toHaveLength(12);
+});
+
+test("start width contain", () => {
+  expect(generateUnique(12, true, true, true, true, "user-", null)).toContain(
+    "user-"
+  );
+});
+
+test("end width contain", () => {
+  expect(generateUnique(12, true, true, true, true, null, "user-")).toContain(
+    "user-"
+  );
 });
