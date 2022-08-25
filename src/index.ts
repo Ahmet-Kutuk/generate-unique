@@ -1,4 +1,4 @@
-import constant from "./constant";
+import constant from './constant';
 
 const createLetterPool = (
   hasNumber: boolean | undefined,
@@ -37,9 +37,9 @@ const getMaxLength = (
           maxLength - (String(startWith).length + String(endWith).length)
         ))
       : null;
-  } else {
+  } else 
     createdMaxLength = maxLength;
-  }
+  
   return createdMaxLength;
 };
 
@@ -52,7 +52,7 @@ const generateUnique = (
   startWith?: string | number,
   endWith?: string | number
 ) => {
-  let createdUnique = "";
+  let createdUnique = '';
   const pool = createLetterPool(
     hasNumber,
     hasSpecial,
@@ -60,7 +60,7 @@ const generateUnique = (
     hasLowerCharacter
   );
   const forMaxLength = getMaxLength(startWith, endWith, maxLength);
-  createdUnique += startWith ? String(startWith) : "";
+  createdUnique += startWith ? String(startWith) : '';
   if (pool.length > 0)
     for (let index = 0; index < forMaxLength; index++) {
       const randomArrayListIndex: number =
@@ -71,7 +71,7 @@ const generateUnique = (
       createdUnique += characterSet[randomArrayValueIndex] as string;
     }
 
-  createdUnique += endWith ? String(endWith) : "";
+  createdUnique += endWith ? String(endWith) : '';
 
   return createdUnique;
 };
