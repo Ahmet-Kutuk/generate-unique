@@ -8,13 +8,13 @@ test('string length', () => {
   expect(generateUnique(12, true, true, true, true)).toHaveLength(12);
 });
 
-test('start width contain', () => {
+test('start with contain', () => {
   expect(generateUnique(12, true, true, true, true, 'user-', null)).toContain(
     'user-'
   );
 });
 
-test('end width contain', () => {
+test('end with contain', () => {
   expect(generateUnique(12, true, true, true, true, null, 'user-')).toContain(
     'user-'
   );
